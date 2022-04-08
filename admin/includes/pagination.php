@@ -1,0 +1,16 @@
+<?php
+$per_page=5;
+$start=0;
+$current_page=1;
+if(isset($_GET['start'])){
+  $start=$_GET['start'];
+  if($start<=0){
+    $start=0;
+    $current_page=1;
+  }else{
+    $current_page=$start;
+    $start--;
+    $start=$start*$per_page;
+  }
+}
+ ?>
