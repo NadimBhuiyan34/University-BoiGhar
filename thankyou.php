@@ -28,7 +28,7 @@
          <?php } ?>
          </div>
          <div class="card-footer text-muted">
-           <a href="home.php" class="btn btn-primary" style="background:#007bff;color:#fff;">Order More</a>
+           <a href="home" class="btn btn-primary" style="background:#007bff;color:#fff;">Order More</a>
          </div>
        </div>
    </div>

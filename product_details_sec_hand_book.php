@@ -13,7 +13,7 @@
      <div class="col-md-4">
       <img class="img-fluid" width="300" height="400" src="admin/uploads/<?= $data['secbook_img']; ?>" alt="First slide">
      </div>
-     <form method="post" action="home.php?action=add&id=<?= $data['secbook_id']; ?>" enctype="multipart/form-data">
+     <form method="post" action="home?action=add&id=<?= $data['secbook_id']; ?>" enctype="multipart/form-data">
      <div class="col-md-8">
         <p class="newarrival text-center">NEW</p>
         <h2><?= $data['secbook_title']; ?></h2>

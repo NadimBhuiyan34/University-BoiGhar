@@ -43,7 +43,7 @@ require_once('functions/function.php');
         $_SESSION['user_roll'] = $row['roll'];
         $_SESSION['user_contact'] = $row['contact'];
         $_SESSION['user_password'] = $row['password'];
-        header("location:home.php");
+        header("location:home");
 		  }else{
 			echo '<script>alert("Please verify your email address by OTP before login.")</script>';
 		  }

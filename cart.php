@@ -49,15 +49,15 @@
 						<td><?php echo $values["item_quantity"]; ?></td>
 						<td>$ <?php echo $values["item_price"]; ?></td>
 						<td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
-						<td><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+						<td><a href="cart?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
 					</tr>
 					<?php
 							$total = $total + ($values["item_quantity"] * $values["item_price"]);
 						}
 					?>
 					<tr>
-						<td colspan="3" align="right">Total</td>
-						<td align="right">$ <?php echo number_format($total, 2); ?></td>
+						<td colspan="3" style="align: right;">Total</td>
+						<td style="align: right;">$ <?php echo number_format($total, 2); ?></td>
 						<td></td>
 					</tr>
 					<?php
@@ -68,7 +68,7 @@
      </div>
      <div class="shipping-btn my-3">
        <?php if(!empty($_SESSION["shopping_cart"])){ ?>
-       <a style="float: right;background:#ff0066;color:#fff;" href="shipping_order.php" type="button" class="btn btn-success">Go To Shipping</a>
+       <a style="float: right;background:#ff0066;color:#fff;" href="shipping_order" type="button" class="btn btn-success">Go To Shipping</a>
      <?php }else { ?>
        <div class="container bg-danger my-5 py-2" style="height:80px; width:800px;">
          <h1 class="text-center text-white mb-5"

@@ -31,7 +31,7 @@
    </a>
  </div>
      </div>
-     <form method="post" action="home.php?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
+     <form method="post" action="home?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
      <div class="col-md-7">
         <p class="newarrival text-center">NEW</p>
         <h2><?= $data['book_title']; ?></h2>

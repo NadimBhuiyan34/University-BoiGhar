@@ -209,7 +209,7 @@ $discount =0.00;
   </div>
 </div>
 <div class="placeorderbtn" style="padding-top:30px;">
-  <a href="cart.php"> <input type="button" name="back" class="btn" value="Back To Cart" style="margin-left:15px;background-color:#03befc; color:#fff;"></a>
+  <a href="cart"> <input type="button" name="back" class="btn" value="Back To Cart" style="margin-left:15px;background-color:#03befc; color:#fff;"></a>
   <input type="submit" name="submit" class="btn" style="background-color:#03befc; color:#fff; margin-left:430px;" value="Place Order">
 </div>
 

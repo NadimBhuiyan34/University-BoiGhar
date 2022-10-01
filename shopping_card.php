@@ -71,7 +71,7 @@
        </tr>
        <tr>
          <td>
-           <a class="btn btn-primary mt-5 place-btn" href="checkout.php">CHECKOUT</a>
+           <a class="btn btn-primary mt-5 place-btn" href="checkout">CHECKOUT</a>
          </td>
        </tr>
      </table>

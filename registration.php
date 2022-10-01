@@ -49,7 +49,7 @@
 
               if (mail($_POST['email'], "OTP", $body, $headers)){ ?>
               <script type="text/javascript">
-                 window.location="verification.php"
+                 window.location="verification"
               </script> <?php
               }else {
                 echo '<script>alert("OTP code not send.")</script>';
@@ -84,7 +84,7 @@
   <button type="submit" class="btn btn-primary" style="display:block;">Submit</button>
 </form>
 <div class="mt-3">
-  Are You Already a Member? <a href="index.php">Sign In</a>
+  Are You Already a Member? <a href="index">Sign In</a>
 </div>
     </div>
     <div class="card-footer text-muted">
