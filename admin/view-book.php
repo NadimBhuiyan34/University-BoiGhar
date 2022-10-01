@@ -2,10 +2,12 @@
     require_once('functions/function.php');
     get_header();
     get_sidebar();
-    $id=$_GET['v'];
+    $id=$_GET['v'] ?? null;
+    checkAndGoto($id, "select_best_sell_book");
     $sel="SELECT * FROM adm_newbook WHERE id='$id'";
     $Q=mysqli_query($con,$sel);
     $in=mysqli_fetch_assoc($Q);
+    checkAndGoto($in, "select_best_sell_book");
 ?>
     <div class="col-md-12">
     	<div class="panel panel-primary">
@@ -51,7 +53,11 @@
                     <tr>
                     	<td>Thumbnail</td>
                         <td>:</td>
-                        <td><?= $in['book_img']; ?></td>
+                        <td>
+                            <a href="uploads/<?= $in['book_img']; ?>">
+                                <img src="uploads/<?= $in['book_img']; ?>" alt="<?= $in['book_img']; ?>">
+                            </a>
+                        </td>
                     </tr>
                 </table>
               </div>

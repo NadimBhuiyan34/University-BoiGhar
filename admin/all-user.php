@@ -102,6 +102,6 @@
 <?php
 	get_footer();
 	} else {
-		echo "<script>alert('Access Denied! You have no permission access this page.')</script>";
+    header("Location: index.php");
 	}
 	?>

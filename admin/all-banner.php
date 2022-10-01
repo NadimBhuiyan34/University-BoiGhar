@@ -5,7 +5,7 @@
     get_header();
     get_sidebar();
 
-    $per_page=5;
+    $per_page=15;
     $start=0;
     $current_page=1;
     if(isset($_GET['start'])){
@@ -55,7 +55,9 @@
                           <td><?= substr($data['ban_subtitle'],0,25); ?>...</td>
                           <td><?= $data['ban_btn']; ?></td>
                           <td>
-                                <img width="50" src="uploads/<?= $data['ban_image']; ?>" alt="Image"/>
+                            <a href="uploads/<?= $data['ban_image']; ?>">
+                              <img src="uploads/<?= $data['ban_image']; ?>" alt="Image"/>
+                            </a>
                           </td>
                           <td>
                           	  <a href="view-banner.php?v=<?= $data['ban_id']; ?>"><i class="fa fa-plus-square fa-lg"></i></a>

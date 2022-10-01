@@ -1,6 +1,7 @@
 <?php
     require_once('functions/function.php');
     needLogged();
+		$title = "Dashboard";
     get_header();
     get_sidebar();
 ?>

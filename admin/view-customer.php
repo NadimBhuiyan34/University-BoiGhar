@@ -3,9 +3,11 @@
     get_header();
     get_sidebar();
     $id=$_GET['v'];
+    checkAndGoto($id, "all-customer");
     $sel="SELECT * FROM users WHERE id='$id'";
     $Q=mysqli_query($con,$sel);
     $info=mysqli_fetch_assoc($Q);
+    checkAndGoto($in, "all-customer");
 ?>
     <div class="col-md-12">
     	<div class="panel panel-primary">
@@ -47,11 +49,6 @@
                     	<td>Phone</td>
                         <td>:</td>
                         <td><?= $info['contact']; ?></td>
-                    </tr>
-                    <tr>
-                    	<td>Password</td>
-                        <td>:</td>
-                        <td><?= $info['password']; ?>.</td>
                     </tr>
                     <tr>
                     	<td>Registration Time</td>

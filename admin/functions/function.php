@@ -22,4 +22,7 @@
             header('Location: login.php');
         }
     }
+    function checkAndGoto($val, $location) {
+        if (!$val) header("Location: $location.php");
+    }
 ?>
