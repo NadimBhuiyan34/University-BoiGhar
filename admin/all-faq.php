@@ -1,10 +1,11 @@
 <?php
-    require_once('functions/function.php');
-    needLogged();
-    if($_SESSION['role']=='1'){
-    get_header();
-    get_sidebar();
-?>
+	require_once 'functions/function.php';
+  $title = 'FAQ\'s';
+	needLogged();
+	if ($_SESSION['role'] == '1') {
+		require_once 'includes/header.php';
+		require_once 'includes/sidebar.php';
+		?>
     <div class="col-md-12">
     	<div class="panel panel-primary">
             <div class="panel-heading">
@@ -28,14 +29,14 @@
                 	</thead>
                     <tbody>
                       <?php
-                          $sel="SELECT * FROM adm_faq ORDER BY id DESC";
-                          $Q=mysqli_query($con,$sel);
-                          while($data=mysqli_fetch_assoc($Q)){
+                      $sel = 'SELECT * FROM adm_faq ORDER BY id DESC';
+                      $Q = mysqli_query($con, $sel);
+                      while ($data = mysqli_fetch_assoc($Q)) {
                       ?>
                     	<tr>
                           <td><?= $data['faq_name']; ?></td>
                           <td><?= $data['faq_email']; ?></td>
-                          <td><?= substr($data['faq_coments'],0,30); ?>...</td>
+                          <td><?= substr($data['faq_coments'], 0, 30); ?>...</td>
                           <td>
                           	<a href="view-faq.php?faq=<?= $data['id']; ?>"><i class="fa fa-eye fa-lg"></i></a>
                               <a href="delete-faq.php?faqdel=<?= $data['id']; ?>"><i class="fa fa-trash fa-lg"></i></a>
@@ -80,8 +81,8 @@
         </div>
     </div><!--col-md-12 end-->
 <?php
-    get_footer();
-  }else{
-      echo "Access Denied! You have no permission access this page.";
-  }
-?>
+	require_once 'includes/footer.php';
+	} else {
+		echo 'Access Denied! You have no permission access this page.';
+	}
+	?>

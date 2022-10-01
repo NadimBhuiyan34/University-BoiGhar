@@ -2,8 +2,8 @@
     require_once('functions/function.php');
     needLogged();
 		$title = "Dashboard";
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
 ?>
 <div class="col-md-12 gray-bg">
 
@@ -287,5 +287,5 @@ let chart3 = new Chart(mychart3, {
 });
 </script>
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>

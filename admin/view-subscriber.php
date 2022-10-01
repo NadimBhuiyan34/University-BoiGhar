@@ -1,8 +1,8 @@
 <?php
     require_once('functions/function.php');
-    get_header();
-    get_sidebar();
-    $id=$_GET['v'];
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
+    $id=$_GET['v'] ?? null;
     checkAndGoto($id, 'all-subscriber');
     $sel="SELECT * FROM adm_subscribers WHERE subscriber_id='$id'";
     $Q=mysqli_query($con,$sel);
@@ -55,5 +55,5 @@
         </div>
     </div><!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>

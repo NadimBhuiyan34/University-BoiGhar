@@ -1,7 +1,7 @@
 <?php
     require_once('functions/function.php');
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
     $id=$_GET['faq'];
     checkAndGoto($id, 'all-faq');
     $sel="SELECT * FROM adm_faq WHERE id='$id'";
@@ -73,5 +73,5 @@
 </div>
 <!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>
