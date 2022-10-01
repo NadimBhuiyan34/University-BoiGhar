@@ -1,7 +1,7 @@
 <?php
 
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
    //needLogged();
 
    if(isset($_GET["action"]))
@@ -78,5 +78,5 @@
    </div>
  </div>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

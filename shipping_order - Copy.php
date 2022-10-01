@@ -1,7 +1,7 @@
 <?php
    session_start();
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
 $discount =0.00;
 
  if(isset($_POST['submit'])){
@@ -218,5 +218,5 @@ $discount =0.00;
 </div>
  <!--design end-->
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

@@ -1,6 +1,6 @@
 <?php
   require_once('functions/function.php');
-  get_header();
+  require_once 'includes/header.php';
  ?>
  <div class="profile-area" style="display: flex;align-items: center;justify-content: center;">
    <div class="info">
@@ -144,5 +144,5 @@
    </div>
  </div>
   <?php
-   get_footer();
+   require_once 'includes/footer.php';
    ?>
