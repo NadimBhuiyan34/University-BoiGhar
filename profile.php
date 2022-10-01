@@ -7,7 +7,7 @@
      <div class="card text-center" style="width:650px;height:650px; margin-top:100px;margin-bottom:100px;padding:10px;font-weight:bold;">
    <div class="card-header">
      <h3 style="float:left;">Profile Information</h3>
-     <a style="float:right;" href="logout.php" class="btn btn-primary">Log Out</a>
+     <a style="float:right;" href="logout" class="btn btn-primary">Log Out</a>
    </div>
    <div class="card-body">
      <!---->
@@ -63,7 +63,7 @@
             <td><?= $_SESSION['user_password']; ?></td>
         </tr>
     </table>
-    <br> <a href="edit-profile.php?ed=<?= $_SESSION['user_id']; ?>" class="btn btn-primary">Edit Profile</a>
+    <br> <a href="edit-profile?ed=<?= $_SESSION['user_id']; ?>" class="btn btn-primary">Edit Profile</a>
   </div>
 
   <div class="tab-pane fade" id="orderstatus" role="tabpanel" aria-labelledby="orderstatus-tab">

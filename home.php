@@ -144,7 +144,7 @@
                         <h1>Welcome To Our University BoiGhar</h1>
                         <p>Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure repreh nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occcu idatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Horem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temin cididunt ut labore et dolore magna aliqua Ut enim ad minim veniam,quis nostrude</p>
-                        <a href="about.php" class="theme-btn blue-bg-border mt-20"><span class="btn-text">Read More</span></a>
+                        <a href="about" class="theme-btn blue-bg-border mt-20"><span class="btn-text">Read More</span></a>
                     </div>
 
                 </div>
@@ -173,16 +173,16 @@
                 $Q=mysqli_query($con,$sel);
                 while($data=mysqli_fetch_assoc($Q)){
              ?>
-     <form method="post" action="home.php?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
+     <form method="post" action="home?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
     <div class="item">
       <div class="product-wrapper mb-45 text-center">
 
           <input type="hidden" name="hidden_title" value="<?= $data['book_title']; ?>" />
           <input type="hidden" name="hidden_price" value="<?= $data['book_price']; ?>" />
           <input type="hidden" min="1" max="100" name="quantity" value="1" class="form-control" />
-          <div class="product-img"> <a href="product_details.php?p=<?= $data['id']; ?>" data-abc="true"> <img width="350px" height="260px" src="admin/uploads/<?= $data['book_img']; ?>" alt=""> </a> <span class="text-center"><i class="fa fa-rupee"></i><?= $data['book_price']; ?></span>
+          <div class="product-img"> <a href="product_details?p=<?= $data['id']; ?>" data-abc="true"> <img width="350px" height="260px" src="admin/uploads/<?= $data['book_img']; ?>" alt=""> </a> <span class="text-center"><i class="fa fa-rupee"></i><?= $data['book_price']; ?></span>
               <div class="product-action">
-                  <div class="product-action-style"> <a href="product_details.php?p=<?= $data['id']; ?>"> <i class="fa fa-eye"></i> </a> <a href="#"> <i class="fa fa-heart"></i> </a> <a href="#"><button type="submit" style="border:none;background:#fff;" name="add_to_cart"> <i class="fa fa-shopping-cart"></i></button></a></div>
+                  <div class="product-action-style"> <a href="product_details?p=<?= $data['id']; ?>"> <i class="fa fa-eye"></i> </a> <a href="#"> <i class="fa fa-heart"></i> </a> <a href="#"><button type="submit" style="border:none;background:#fff;" name="add_to_cart"> <i class="fa fa-shopping-cart"></i></button></a></div>
               </div>
           </div>
           <div class="text-center mt-3">
@@ -204,10 +204,10 @@
     <section id="products">
         <div class="container my-5">
           <div class="text-center" id="new">
-            <h3 class="font-weight-bold text-primary"><a href="newcollection_books.php">New Collection Books</a></h3>
+            <h3 class="font-weight-bold text-primary"><a href="newcollection_books">New Collection Books</a></h3>
           </div>
             <div class="d-flex flex-row">
-                <div class="text-muted m-2" id="res"> <a href="newcollection_books.php">Showing All</a> </div>
+                <div class="text-muted m-2" id="res"> <a href="newcollection_books">Showing All</a> </div>
                 <div class="ml-auto mr-lg-4">
                     <div id="sorting" class="border rounded p-1 m-1"> <span class="text-muted">Sort by</span> <select name="sort" id="sort">
                             <option value="popularity"><b>Popularity</b></option>
@@ -224,9 +224,9 @@
                   while($data=mysqli_fetch_assoc($Q)){
                ?>
                 <div class="col-lg-3 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mb-3">
-                    <form method="post" action="home.php?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
+                    <form method="post" action="home?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
                     <div class="card">
-                      <a href="product_details.php?p=<?= $data['id']; ?>">
+                      <a href="product_details?p=<?= $data['id']; ?>">
                        <img name="newbook_img" class="card-img-top img-fluid" src="admin/uploads/<?= $data['book_img']; ?>">
                        </a>
                         <div class="card-body">
@@ -266,14 +266,14 @@
        ?>
 
         <div class="col-md-3">
-        <form method="post" action="home.php?action=add&id=<?= $data['secbook_id']; ?>" enctype="multipart/form-data">
+        <form method="post" action="home?action=add&id=<?= $data['secbook_id']; ?>" enctype="multipart/form-data">
             <div class="product-wrapper mb-45 text-center">
               <input type="hidden" name="hidden_title" value="<?= $data['secbook_title']; ?>" />
               <input type="hidden" name="hidden_price" value="<?= $data['secbook_price']; ?>" />
               <input type="hidden" min="1" max="100" name="quantity" value="1" class="form-control" />
-                <div class="product-img"> <a href="product_details_sec_hand_book.php?p=<?= $data['secbook_id']; ?>" data-abc="true"> <img src="admin/uploads/<?= $data['secbook_img']; ?>" alt=""> </a> <span class="text-center"><i class="fa fa-rupee"></i>TK. <?= $data['secbook_price']; ?></span>
+                <div class="product-img"> <a href="product_details_sec_hand_book?p=<?= $data['secbook_id']; ?>" data-abc="true"> <img src="admin/uploads/<?= $data['secbook_img']; ?>" alt=""> </a> <span class="text-center"><i class="fa fa-rupee"></i>TK. <?= $data['secbook_price']; ?></span>
                     <div class="product-action">
-                        <div class="product-action-style"> <a href="product_details_sec_hand_book.php?p=<?= $data['secbook_id']; ?>"> <i class="fa fa-eye"></i> </a> <a href="#"> <i class="fa fa-heart"></i> </a> <a href="#"><button type="submit" style="border:none;background:#fff;" name="add_to_cart"> <i class="fa fa-shopping-cart"></i></button></a> </div>
+                        <div class="product-action-style"> <a href="product_details_sec_hand_book?p=<?= $data['secbook_id']; ?>"> <i class="fa fa-eye"></i> </a> <a href="#"> <i class="fa fa-heart"></i> </a> <a href="#"><button type="submit" style="border:none;background:#fff;" name="add_to_cart"> <i class="fa fa-shopping-cart"></i></button></a> </div>
                     </div>
                 </div>
                 <div class="text-center mt-3">
@@ -292,7 +292,7 @@
 
 </div>
 <div class="text-center">
-  <a href="all_sec_hand_book.php" class="btn btn-success" type="button" name="button">Show All</a>
+  <a href="all_sec_hand_book" class="btn btn-success" type="button" name="button">Show All</a>
 </div>
 </div>
     <!--unused book end-->
@@ -341,7 +341,7 @@
     <!--start donate book area-->
     <div class="donatebook-area my-5" id="donatebook">
       <div class="text-center" id="donate">
-        <h3 class="font-weight-bold text-primary"><a href="all_donatebooks.php">Donation Books</a></h3>
+        <h3 class="font-weight-bold text-primary"><a href="all_donatebooks">Donation Books</a></h3>
       </div>
       <div class="container d-flex justify-content-center mt-30 mb-50">
 
@@ -370,7 +370,7 @@
                     <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                         <!--<h3 class="mb-0 font-weight-semibold">TK.</h3>-->
                         <div> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
-                        <a type="button" style="background:#003366; color:#fff;" class="btn btn-primary mt-3" href="donation_book_request.php?donateid=<?= $data['donate_id']; ?>">
+                        <a type="button" style="background:#003366; color:#fff;" class="btn btn-primary mt-3" href="donation_book_request?donateid=<?= $data['donate_id']; ?>">
                         APPLY</a>
                     </div>
                 </div>
@@ -459,7 +459,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="view-all-events text-center font-weight-bold">
-                             <a href="event.php"><button class="yewello-btn">view all events<span>&rarr;</span></button></a>
+                             <a href="event"><button class="yewello-btn">view all events<span>&rarr;</span></button></a>
 
                         </div>
                     </div>

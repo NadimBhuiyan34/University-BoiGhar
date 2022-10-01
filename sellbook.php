@@ -13,7 +13,7 @@
                              <h1 class="white-color f-700">Sell Books</h1>
                              <nav class="text-center" aria-label="breadcrumb">
                                  <ol class="breadcrumb justify-content-center">
-                                     <li class="breadcrumb-item"><a href="home.php">Buy Book</a></li>
+                                     <li class="breadcrumb-item"><a href="home">Buy Book</a></li>
                                      <li class="breadcrumb-item active" aria-current="page">Sell Books</li>
                                  </ol>
                              </nav>

@@ -15,7 +15,7 @@
       if(!empty($fullname)){
           $update="UPDATE users SET fullname='$fullname',roll='$roll',contact='$contact',password='$password' WHERE id='$id'";
           if(mysqli_query($con,$update)){
-              header('Location: profile.php');
+              header('Location: profile');
           }else{
             echo "Update failed!";
           }

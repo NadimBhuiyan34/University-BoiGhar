@@ -15,7 +15,7 @@ if (isset($_POST['verify']))
   }
   if ($ver1==1) {
     echo '<script>alert("Registration is Complete. Now Login..")</script>';
-    header("location:index.php");
+    header("location:index");
   }
   else
   {

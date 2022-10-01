@@ -34,7 +34,7 @@
                     <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                         <!--<h3 class="mb-0 font-weight-semibold">TK.</h3>-->
                         <div> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
-                        <a type="button" style="background:#003366; color:#fff;" class="btn btn-primary mt-3" href="donation_book_request.php?donateid=<?= $data['donate_id']; ?>">
+                        <a type="button" style="background:#003366; color:#fff;" class="btn btn-primary mt-3" href="donation_book_request?donateid=<?= $data['donate_id']; ?>">
                         APPLY</a>
                     </div>
                 </div>

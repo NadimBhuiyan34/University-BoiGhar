@@ -16,9 +16,9 @@
        while($data=mysqli_fetch_assoc($Q)){
     ?>
      <div class="col-lg-3 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mb-3">
-                    <form method="post" action="home.php?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
+                    <form method="post" action="home?action=add&id=<?= $data['id']; ?>" enctype="multipart/form-data">
                     <div class="card">
-                      <a href="product_details.php?p=<?= $data['id']; ?>">
+                      <a href="product_details?p=<?= $data['id']; ?>">
                        <img name="newbook_img" class="card-img-top img-fluid" src="admin/uploads/<?= $data['book_img']; ?>">
                        </a>
                         <div class="card-body">
