@@ -1,6 +1,6 @@
 <?php
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
    //needLogged();
 
    $total_item_cart=0;
@@ -607,5 +607,5 @@
  })
  </script>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

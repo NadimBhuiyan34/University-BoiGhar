@@ -1,6 +1,6 @@
 <?php
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
    unset($_SESSION["shopping_cart"]);
    //var_dump($_SESSION["shopping_cart"]);
    //session_destroy($_SESSION["shopping_cart"]);
@@ -34,5 +34,5 @@
    </div>
  </div>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

@@ -1,12 +1,13 @@
 <?php
 
    require_once('functions/function.php');
-   get_header();
-   $pid=$_GET['p'];
+   require_once 'includes/header.php';
+   $pid=$_GET['p'] ?? null;
+   if (!$pid) header('Location: all_sec_hand_book.php');
    $sel="SELECT * FROM adm_sechandbook WHERE secbook_id='$pid'";
    $Q=mysqli_query($con,$sel);
    $data=mysqli_fetch_assoc($Q);
-
+   if (!$data) header('Location: all_sec_hand_book.php');
  ?>
  <div class="container" id="product_container">
    <div class="row">
@@ -128,5 +129,5 @@
 </div>
  </div>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

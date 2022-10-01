@@ -1,6 +1,6 @@
 <?php
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
  ?>
  <div class="image-donate" style="background:#ecf2f9;">
    <div class="container py-5">
@@ -121,5 +121,5 @@
 </div>
  </div>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

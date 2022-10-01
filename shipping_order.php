@@ -1,7 +1,7 @@
 <?php
 
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
 $discount =0.00;
 $orderid=rand(10000,99999);
 $username=$_SESSION['user_username'];
@@ -232,5 +232,5 @@ $orderStatus="hold";
 </div>
  <!--design end-->
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

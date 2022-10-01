@@ -1,6 +1,6 @@
 <?php
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
  ?>
     <!-- slider-start -->
     <div class="slider-area">
@@ -148,5 +148,5 @@
     </div>
     <!-- subscribe end -->
     <?php
-       get_footer();
+       require_once 'includes/footer.php';
      ?>

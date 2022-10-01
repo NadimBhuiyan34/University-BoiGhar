@@ -1,10 +1,12 @@
 <?php
    require_once('functions/function.php');
-   get_header();
-   $donateid=$_GET['donateid'];
+   require_once 'includes/header.php';
+   $donateid=$_GET['donateid'] ?? null;
+   if (!$donateid) header('Location: all_donatebooks.php');
    $sel="SELECT * FROM adm_donatebook WHERE donate_id='$donateid'";
    $Q=mysqli_query($con,$sel);
    $data=mysqli_fetch_assoc($Q);
+   if (!$data) header('Location: all_donatebooks.php');
  ?>
  <div class="donation-book-section" style="background:#c2d6d6;padding-top: 50px;">
    <div class="container">
@@ -85,5 +87,5 @@
    </div>
  </div>
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>

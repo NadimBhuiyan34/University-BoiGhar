@@ -1,6 +1,6 @@
 <?php
    require_once('functions/function.php');
-   get_header();
+   require_once 'includes/header.php';
  ?>
 
  <!--donation book start-->
@@ -51,5 +51,5 @@
  <!--unused book end-->
 
 <?php
-   get_footer();
+   require_once 'includes/footer.php';
  ?>
