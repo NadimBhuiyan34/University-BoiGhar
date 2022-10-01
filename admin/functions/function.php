@@ -13,7 +13,7 @@
     }
 
     function getLoggedID(){
-        return $_SESSION['id'] ? true:false;
+        return isset($_SESSION['id']) && $_SESSION['id'] ? true : false;
     }
 
     function needLogged(){
