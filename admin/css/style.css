@@ -75,7 +75,7 @@ body {
 .side_user {
   text-align: center;
   color: #fff;
-  padding: 20px 0px 10px;
+  padding: 20px 0px 20px;
   border-bottom: 1px solid #000;
 }
 
@@ -417,6 +417,10 @@ body {
 
 /*pagination start*/
 
+.my-2 {
+  margin: 1.25rem 0rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -439,4 +443,31 @@ body {
 
 .login-form .input-group {
   margin: 1.5rem 0rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+table img {
+  max-width: 72px;
+  max-height: 72px;
+}
+
+table td {
+  vertical-align: middle !important;
+}
+
+ul li.active {
+  background-color: #296b83;
 }

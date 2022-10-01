@@ -3,9 +3,11 @@
     get_header();
     get_sidebar();
     $id=$_GET['v'];
+    checkAndGoto($id, 'all-orderlist');
     $sel="SELECT * FROM adm_approve_orderlist WHERE id='$id'";
     $Q=mysqli_query($con,$sel);
     $in=mysqli_fetch_assoc($Q);
+    checkAndGoto($in, 'all-orderlist');
 ?>
     <div class="col-md-12">
     	<div class="panel panel-primary">

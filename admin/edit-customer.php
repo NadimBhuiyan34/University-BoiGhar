@@ -11,10 +11,9 @@
         $fullname=$_POST['fullname'];
         $roll=$_POST['roll'];
         $contact=$_POST['contact'];
-        $password=$_POST['password'];
         $status=$_POST['status'];
 
-            $update="UPDATE users SET fullname='$fullname',roll='$roll',contact='$contact',password='$password',status='$status' WHERE id='$id'";
+            $update="UPDATE users SET fullname='$fullname',roll='$roll',contact='$contact',status='$status' WHERE id='$id'";
             if(mysqli_query($con,$update)){
                 header('Location: view-customer.php?v='.$id);
             }else{
@@ -65,12 +64,6 @@
                 <label for="" class="col-sm-3 control-label">Phone</label>
                 <div class="col-sm-8">
                   <input type="text" name="contact" class="form-control" value="<?= $info['contact'];?>">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="" class="col-sm-3 control-label">Password</label>
-                <div class="col-sm-8">
-                  <input type="text" name="password" class="form-control" value="<?= $info['password'];?>">
                 </div>
               </div>
               <div class="form-group">

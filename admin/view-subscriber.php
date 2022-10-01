@@ -3,9 +3,11 @@
     get_header();
     get_sidebar();
     $id=$_GET['v'];
+    checkAndGoto($id, 'all-subscriber');
     $sel="SELECT * FROM adm_subscribers WHERE subscriber_id='$id'";
     $Q=mysqli_query($con,$sel);
     $in=mysqli_fetch_assoc($Q);
+    checkAndGoto($in, 'all-subscriber');
 ?>
     <div class="col-md-12">
     	<div class="panel panel-primary">

@@ -2,10 +2,13 @@
     require_once('functions/function.php');
     get_header();
     get_sidebar();
-    $id=$_GET['v'];
+    
+    $id=$_GET['v'] ?? null;
+    checkAndGoto($id, "all-banner");
     $sel="SELECT * FROM adm_banner WHERE ban_id='$id'";
     $Q=mysqli_query($con,$sel);
     $in=mysqli_fetch_assoc($Q);
+    checkAndGoto($id, "all-banner");
 ?>
     <div class="col-md-12">
     	<div class="panel panel-primary">
@@ -42,7 +45,11 @@
                     <tr>
                     	<td>Photo</td>
                         <td>:</td>
-                        <td><?= $in['ban_image']; ?></td>
+                        <td>
+                            <a href="uploads/<?= $in['ban_image']; ?>">
+                                <img class="img-fluid" src="uploads/<?= $in['ban_image']; ?>" alt="Image"/>
+                            </a>
+                        </td>
                     </tr>
                 </table>
               </div>
