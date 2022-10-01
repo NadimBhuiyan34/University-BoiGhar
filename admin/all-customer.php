@@ -1,9 +1,10 @@
 <?php
     require_once('functions/function.php');
     needLogged();
+		$title = 'Customer List';
     if($_SESSION['role']=='1'){
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
 ?>
 <div class="col-md-12">
 	<div class="panel panel-primary">
@@ -88,7 +89,7 @@
 </div>
 <!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
   }else{
       echo "Access Denied! You have no permission access this page.";
   }

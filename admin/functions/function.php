@@ -1,28 +1,20 @@
-<?php session_start();
-    require_once('../config.php');
-    function get_header(){
-        require_once('includes/header.php');
-    }
+<?php
 
-    function get_sidebar(){
-        require_once('includes/sidebar.php');
-    }
+session_start();
+require_once '../config.php';
 
-    function get_footer(){
-        require_once('includes/footer.php');
-    }
+function getLoggedID() {
+	return isset($_SESSION['id']) && $_SESSION['id'] ? true : false;
+}
 
-    function getLoggedID(){
-        return isset($_SESSION['id']) && $_SESSION['id'] ? true : false;
-    }
-
-    function needLogged(){
-        $check=getLoggedID();
-        if(!$check){
-            header('Location: login.php');
-        }
-    }
-    function checkAndGoto($val, $location) {
-        if (!$val) header("Location: $location.php");
-    }
-?>
+function needLogged() {
+	$check = getLoggedID();
+	if (!$check) {
+		header('Location: login.php');
+	}
+}
+function checkAndGoto($val, $location) {
+	if (!$val) {
+		header("Location: $location.php");
+	}
+}

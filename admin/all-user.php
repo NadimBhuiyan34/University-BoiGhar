@@ -1,10 +1,13 @@
 <?php
 	require_once 'functions/function.php';
 	needLogged();
-	if ($_SESSION['role'] == '1') {
-		get_header();
-		get_sidebar();
-?>
+	if ($_SESSION['role'] != '1') {
+		header('Location: index.php');
+	}
+	$title = 'Users';
+	require_once 'includes/header.php';
+	require_once 'includes/sidebar.php';
+	?>
 <div class="col-md-12">
 	<div class="panel panel-primary">
 		<div class="panel-heading">
@@ -31,10 +34,10 @@
 				</thead>
 				<tbody>
 					<?php
-					$sel = 'SELECT * FROM adm_user INNER JOIN adm_role ON adm_user.role_id = adm_role.role_id WHERE adm_user.user_id!=' . $_SESSION['id'];
-          $Q = mysqli_query($con, $sel);
-          while ($data = mysqli_fetch_assoc($Q)) {
-          ?>
+						$sel = 'SELECT * FROM adm_user INNER JOIN adm_role ON adm_user.role_id = adm_role.role_id WHERE adm_user.user_id!=' . $_SESSION['id'];
+						$Q = mysqli_query($con, $sel);
+						while ($data = mysqli_fetch_assoc($Q)) {
+					?>
 					<tr>
 						<td><?php echo $data['user_name']; ?></td>
 						<td><?= $data['user_email']; ?></td>
@@ -100,8 +103,5 @@
 </div>
 <!--col-md-12 end-->
 <?php
-	get_footer();
-	} else {
-    header("Location: index.php");
-	}
+	require_once 'includes/footer.php';
 	?>

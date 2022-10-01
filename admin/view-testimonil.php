@@ -1,7 +1,7 @@
 <?php
     require_once('functions/function.php');
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
     $id=$_GET['t'];
     checkAndGoto($id, 'all-testimonil');
     $sel="SELECT * FROM adm_testimonil WHERE testo_id='$id'";
@@ -44,10 +44,10 @@
 						<td>Thumbnail</td>
 						<td>:</td>
 						<td>
-                            <a href="uploads/<?= $in['client_img']; ?>">
-                                <img src="uploads/<?= $in['client_img']; ?>" alt="<?= $in['client_img']; ?>">
-                            </a>
-                        </td>
+							<a href="uploads/<?= $in['client_img']; ?>">
+								<img src="uploads/<?= $in['client_img']; ?>" alt="<?= $in['client_img']; ?>">
+							</a>
+						</td>
 					</tr>
 
 					<tr>
@@ -76,5 +76,5 @@
 </div>
 <!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>

@@ -1,7 +1,7 @@
 <?php
     require_once('functions/function.php');
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
     $s="SELECT * FROM adm_discount";
     $Qe=mysqli_query($con,$s);
     $in=mysqli_fetch_assoc($Qe);
@@ -57,5 +57,5 @@
     </form>
 </div><!--col-md-12 end-->
 <?php
-get_footer();
+require_once('includes/footer.php');
 ?>

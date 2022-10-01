@@ -1,8 +1,8 @@
 <?php
     require_once('functions/function.php');
     needLogged();
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
 ?>
     <div class="col-md-12">
     	<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
@@ -107,5 +107,5 @@
         </form>
     </div><!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>

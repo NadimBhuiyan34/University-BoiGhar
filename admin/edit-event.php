@@ -1,7 +1,7 @@
 <?php
     require_once('functions/function.php');
-    get_header();
-    get_sidebar();
+    require_once('includes/header.php');
+    require_once('includes/sidebar.php');
     $id=$_GET['ed'];
     $sel="SELECT * FROM adm_event WHERE event_id=$id";
     $Q=mysqli_query($con,$sel);
@@ -85,5 +85,5 @@
         </form>
     </div><!--col-md-12 end-->
 <?php
-    get_footer();
+    require_once('includes/footer.php');
 ?>
